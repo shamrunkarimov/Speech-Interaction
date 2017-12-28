@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <title>Flat HTML5/CSS3 Login Form</title>
+  
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+      
+      <script>
+          function timedText() {
+              //var x = document.getElementById("start");
+              var x = "start talking ...";
+              //setTimeout(function(){ x = "Start talking...." }, 2000);
+              document.getElementById("start").innerHTML = x;         }
+      </script>
+      
+  
+</head>
+
+<body>
+  <div class="login-page">
+  <div class="form">
+      <form class="login-form" method="POST" action="/new/record/">
+          
+      <p id="start"></p>
+      <input name="text" type="text" placeholder="{{ result }}"/>
+      <input type="text" placeholder="{{ result1 }}"/>
+      
+      <button onclick="setTimeout(timedText, 2000)">record</button>
+      
+      <select name="languages">
+          <ul><option val="" >Please choose</option>
+          <option value="en-az">en-az</option>
+          <option value="en-it">en-it</option>
+          <option value="en-ru">en-ru</option>
+          <option value="en-tr">en-tr</option>
+          <option value="en-de">en-de</option>
+          <option value="en-fr">en-fr</option>
+          <option value="en-es">en-es</option>
+          <option value="en-be">en-be</option>
+          <option value="en-ca">en-ca</option>
+          <option value="en-cs">en-cs</option>
+          <option value="en-da">en-da</option>
+          <option value="en-el">en-el</option>
+          <option value="en-et">en-et</option>
+          <option value="en-fi">en-fi</option>
+          <option value="en-hu">en-hu</option>
+          <option value="en-lt">en-lt</option>
+          <option value="en-lv">en-lv</option>
+          <option value="en-nl">en-nl</option>
+          <option value="en-no">en-no</option>
+          <option value="en-sk">en-sk</option>
+          <option value="en-sl">en-sl</option>
+          <option value="en-sq">en-sq</option>
+          <option value="en-sv">en-sv</option>
+          <option value="en-uk">en-uk</option>
+          <option value="en-ar">en-ar</option>
+      </select>
+      
+
+    </form>
+  </div>
+</div>
+  
+    
+
+</body>
+</html>
